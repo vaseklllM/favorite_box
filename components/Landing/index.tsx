@@ -74,7 +74,7 @@ export default function Landing() {
   return (
     <div className={classes.main}>
       <PhoneNumber>{phoneNumber}</PhoneNumber>
-      <CompanyName name={companyName} backgroundColor={colors.green} />
+      {/* <CompanyName name={companyName} backgroundColor={colors.green} /> */}
       {productImageBlock()}
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
       <Video data={video} />

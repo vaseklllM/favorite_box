@@ -3,6 +3,7 @@ import { H2 } from "../../Text"
 import venzel from "../assets/venzel.png"
 import ComparisonItem, { IComparisonItem } from "./ComparisonItem"
 import { Span30 } from "../../Text/Typography"
+import Link from "next/link"
 
 interface IProps {
   bacColor: string
@@ -30,9 +31,11 @@ const Comparison = (props: IProps) => {
           <ComparisonItem key={index} {...el} />
         ))}
       </div>
-      <button className={classes.button} style={{ backgroundColor: buttonColor }}>
-        <Span30 className={classes.button_text}>Купить сейчас</Span30>
-      </button>
+      <Link href='/#buy'>
+        <button className={classes.button} style={{ backgroundColor: buttonColor }}>
+          <Span30 className={classes.button_text}>Купить сейчас</Span30>
+        </button>
+      </Link>
     </section>
   )
 }

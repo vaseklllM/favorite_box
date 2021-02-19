@@ -15,7 +15,7 @@ interface ISectionBuyProps {
 export default function SectionBuy(props: ISectionBuyProps) {
   const { colors, price } = props
   return (
-    <div className={classes.SectionBuy}>
+    <section id="buy" className={classes.SectionBuy}>
       <Span24>
         Оставьте <b>заявку</b>
       </Span24>
@@ -31,6 +31,6 @@ export default function SectionBuy(props: ISectionBuyProps) {
       </div>
       <Inputs />
       <RemainingForThePromotionRow colors={colors} />
-    </div>
+    </section>
   )
 }

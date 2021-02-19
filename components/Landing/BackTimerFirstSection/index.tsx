@@ -5,6 +5,7 @@ import { IColors } from ".."
 import CheckText from "../CheckText"
 import { Span30 } from "../../Text"
 import { IPrice } from "../../../interfaces/ISite"
+import Link from "next/link"
 
 interface IProps {
   colors: IColors
@@ -32,9 +33,11 @@ export default function BackTimerFirstSection(props: IProps) {
           ))}
         </div>
         <PriceAndTimer colors={colors} price={price} />
-        <button className={classes.button_buy} style={{ backgroundColor: colors.orange }}>
-          <Span30>Купить сейчас</Span30>
-        </button>
+        <Link href='/#buy'>
+          <a className={classes.button_buy} style={{ backgroundColor: colors.orange }}>
+            <Span30>Купить сейчас</Span30>
+          </a>
+        </Link>
         <RemainingForThePromotionRow colors={colors} />
       </div>
     </section>

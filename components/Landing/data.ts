@@ -45,34 +45,34 @@ const sushi: IPageData = {
     comparisons: [
       {
         bad: {
-          img: "https://s4astye.com/sushizl/images/t1.jpg",
+          img: "https://picsum.photos/id/50/480/400",
           description: "Внешний вид роллов оставляет желать лучшего",
         },
         nice: {
-          img: "https://s4astye.com/sushizl/images/t2.jpg",
+          img: "https://picsum.photos/id/49/480/400",
           description:
             "Безупречный и аппетитный внешний вид с идеальным количеством риса и начинки",
         },
       },
       {
         bad: {
-          img: "https://s4astye.com/sushizl/images/t3.jpg",
+          img: "https://picsum.photos/id/51/480/400",
           description: "Обычные самодельные роллы рассыпаются и разваливаются на ходу",
         },
         nice: {
-          img: "https://s4astye.com/sushizl/images/t4.jpg",
+          img: "https://picsum.photos/id/52/480/400",
           description:
             "С помощью аппарата HappySmile получаются плотные и аккуратные рулетики",
         },
       },
       {
         bad: {
-          img: "https://s4astye.com/sushizl/images/t5.jpg",
+          img: "https://picsum.photos/id/53/480/400",
           description:
             "Магазинные роллы содержат мало начинки и нет гарантии, что для их приготовления использовались свежие и качественные продукты",
         },
         nice: {
-          img: "https://s4astye.com/sushizl/images/t6.jpg",
+          img: "https://picsum.photos/id/54/480/400",
           description:
             "Домашние роллы, приготовленные из строго отобранных качественных продуктов с помощью девайса HappySmile, безупречны по вкусу",
         },

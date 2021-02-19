@@ -2,7 +2,7 @@
 // import classes from "./style.module.scss"
 import Video from "./Video"
 import Description from "./Description"
-// import Comparison from "./Comparison"
+import Comparison from "./Comparison"
 // import Instruction from "./Instruction"
 // import ProductReviews from "./ProductReviews"
 // import Order from "./Order"
@@ -79,8 +79,8 @@ export default function Landing() {
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
       <Video data={video} />
       <Description data={descriptionContainer} />
-      {/* <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
-      <Instruction data={instruction} />
+      <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
+       {/*<Instruction data={instruction} />
       <ProductReviews
         data={feedbacks}
         green={colors.green}

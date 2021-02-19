@@ -5,7 +5,7 @@ import Description from "./Description"
 import Comparison from "./Comparison"
 import Instruction from "./Instruction"
 import ProductReviews from "./ProductReviews"
-// import Order from "./Order"
+import Order from "./Order"
 import CompanyName from "./CompanyName"
 import ProductImageBlock from "./ProductImageBlock"
 import BackTimerFirstSection from "./BackTimerFirstSection"
@@ -86,8 +86,8 @@ export default function Landing() {
         green={colors.green}
         starsColor={colors.starsColor}
       />
-      {/* <Order data={order} bacColor={colors.grey} />
-      <CompanyName name={companyName} backgroundColor={colors.green} />
+      <Order data={order} bacColor={colors.grey} />
+      {/*<CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock(1)}
       <SectionBuy colors={colors} price={price} />
       <PhoneNumber>{phoneNumber}</PhoneNumber>  */}

@@ -1,9 +1,9 @@
-const path = require('path')
-const withImages = require('next-images')
+const path = require("path")
+const withImages = require("next-images")
 
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
-  ...withImages()
+  ...withImages(),
 }

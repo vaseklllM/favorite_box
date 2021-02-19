@@ -1,7 +1,7 @@
 // import { ILandingProps } from ".."
 // import classes from "./style.module.scss"
-// import Video from "./Video"
-// import Description from "./Description"
+import Video from "./Video"
+import Description from "./Description"
 // import Comparison from "./Comparison"
 // import Instruction from "./Instruction"
 // import ProductReviews from "./ProductReviews"
@@ -77,9 +77,9 @@ export default function Landing() {
       <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock()}
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
-      {/*<Video data={video} />
+      <Video data={video} />
       <Description data={descriptionContainer} />
-      <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
+      {/* <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
       <Instruction data={instruction} />
       <ProductReviews
         data={feedbacks}
@@ -90,7 +90,7 @@ export default function Landing() {
       <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock(1)}
       <SectionBuy colors={colors} price={price} />
-      <PhoneNumber>{phoneNumber}</PhoneNumber> */}
+      <PhoneNumber>{phoneNumber}</PhoneNumber>  */}
     </div>
   )
 }

@@ -30,7 +30,7 @@ const sushi: IPageData = {
     valute: "грн.",
   },
   video: {
-    img: "https://s4astye.com/sushizl/images/Zastavka_Dozator_dlya_Sushi.jpg",
+    img: "https://happysmile.ua/data/uploads/diozator_dlya_sushi_video.jpg",
     url: "https://www.youtube.com/embed/TFKa4liHkaE",
   },
   descriptionContainer: {

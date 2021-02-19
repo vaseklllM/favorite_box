@@ -14,7 +14,7 @@ export default function ProductImageBlock(props: IProps) {
   const { img, name, colors } = props
 
   return (
-    <section className={classes.ProductImageBlock}>
+    <section>
       <div className={classes.title_block} style={{ backgroundColor: colors.grey }}>
         <H4 className={classes.title}>{name}</H4>
       </div>

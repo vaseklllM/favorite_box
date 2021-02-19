@@ -6,13 +6,14 @@
 // import Instruction from "./Instruction"
 // import ProductReviews from "./ProductReviews"
 // import Order from "./Order"
-// import CompanyName from "./CompanyName"
-// import ProductImageBlock from "./ProductImageBlock"
-// import BackTimerFirstSection from "./BackTimerFirstSection"
+import CompanyName from "./CompanyName"
+import ProductImageBlock from "./ProductImageBlock"
+import BackTimerFirstSection from "./BackTimerFirstSection"
 import PhoneNumber from "./PhoneNumber"
 // import SectionBuy from "./SectionBuy"
 import classes from "./style.module.scss"
 import data from "./data"
+// import data from './eye'
 
 // import { IPageData } from "../../interfaces/ISite"
 
@@ -58,25 +59,25 @@ export default function Landing() {
     order,
   } = data
 
-  // function productImageBlock(nameId?: number, imgId?: number) {
-  //   if (Array.isArray(mainImages) && Array.isArray(names)) {
-  //     return (
-  //       <ProductImageBlock
-  //         name={names[nameId ?? 0]}
-  //         img={mainImages[imgId ?? 0]}
-  //         colors={colors}
-  //       />
-  //     )
-  //   }
-  // }
+  function productImageBlock(nameId?: number, imgId?: number) {
+    if (Array.isArray(mainImages) && Array.isArray(names)) {
+      return (
+        <ProductImageBlock
+          name={names[nameId ?? 0]}
+          img={mainImages[imgId ?? 0]}
+          colors={colors}
+        />
+      )
+    }
+  }
 
   return (
     <div className={classes.main}>
       <PhoneNumber>{phoneNumber}</PhoneNumber>
-      {/*<CompanyName name={companyName} backgroundColor={colors.green} />
+      <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock()}
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
-      <Video data={video} />
+      {/*<Video data={video} />
       <Description data={descriptionContainer} />
       <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
       <Instruction data={instruction} />

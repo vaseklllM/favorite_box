@@ -31,13 +31,13 @@ export default function SectionBuy(props: ISectionBuyProps) {
       </div>
       <Inputs />
       <RemainingForThePromotionRow colors={colors} />
-      <style global jsx>
+      {/* <style global jsx>
         {`
           html {
             scroll-behavior: smooth;
           }
         `}
-      </style>
+      </style> */}
     </section>
   )
 }

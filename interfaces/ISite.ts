@@ -1,9 +1,4 @@
-export default interface ISite {
-  id: number
-  text: string
-  link: string
-  pageData: IPageData
-}
+import { IOrder } from "./order"
 
 export interface IPageData {
   companyName: string // название компании
@@ -39,7 +34,7 @@ export interface IPageData {
   // Отзывы о товаре
   feedbacks: IFeedbacks
   // информация о заказе
-  // order?: IOrder
+  order?: IOrder
   // companyAddress
 }
 

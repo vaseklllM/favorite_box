@@ -9,53 +9,54 @@
 // import CompanyName from "./CompanyName"
 // import ProductImageBlock from "./ProductImageBlock"
 // import BackTimerFirstSection from "./BackTimerFirstSection"
-// import PhoneNumber from "./PhoneNumber"
+import PhoneNumber from "./PhoneNumber"
 // import SectionBuy from "./SectionBuy"
 import classes from "./style.module.scss"
+import data from "./data"
 
-import { IPageData } from "../../interfaces/ISite"
+// import { IPageData } from "../../interfaces/ISite"
 
-// export interface IColors {
-//   green: string
-//   grey: string
-//   grey1: string
-//   timerGray: string
-//   hr: string
-//   orange: string
-//   orange1: string
-//   textGreenColor: string
-//   blue: string
-//   starsColor: string
-// }
+export interface IColors {
+  green: string
+  grey: string
+  grey1: string
+  timerGray: string
+  hr: string
+  orange: string
+  orange1: string
+  textGreenColor: string
+  blue: string
+  starsColor: string
+}
 
-// const colors: IColors = {
-//   green: "#58b958",
-//   grey: "#2f3339",
-//   grey1: "#f7f8f9",
-//   timerGray: "#EFF2F5",
-//   hr: "#DEDFE0",
-//   orange: "#FA9535",
-//   starsColor: "#FA9535",
-//   orange1: "#FF4E00",
-//   textGreenColor: "green",
-//   blue: "#36D0F8",
-// }
+const colors: IColors = {
+  green: "#58b958",
+  grey: "#2f3339",
+  grey1: "#f7f8f9",
+  timerGray: "#EFF2F5",
+  hr: "#DEDFE0",
+  orange: "#FA9535",
+  starsColor: "#FA9535",
+  orange1: "#FF4E00",
+  textGreenColor: "green",
+  blue: "#36D0F8",
+}
 
-export default function Landing(/* props: IPageData */) {
-  // const {
-  //   phoneNumber,
-  //   companyName,
-  //   names,
-  //   mainImages,
-  //   advantages,
-  //   price,
-  //   video,
-  //   descriptionContainer,
-  //   comparison,
-  //   instruction,
-  //   feedbacks,
-  //   // order,
-  // } = props
+export default function Landing() {
+  const {
+    phoneNumber,
+    companyName,
+    names,
+    mainImages,
+    advantages,
+    price,
+    video,
+    descriptionContainer,
+    comparison,
+    instruction,
+    feedbacks,
+    order,
+  } = data
 
   // function productImageBlock(nameId?: number, imgId?: number) {
   //   if (Array.isArray(mainImages) && Array.isArray(names)) {
@@ -70,9 +71,9 @@ export default function Landing(/* props: IPageData */) {
   // }
 
   return (
-    <div className={classes.main}> data
-      {/* <PhoneNumber>{phoneNumber}</PhoneNumber>
-      <CompanyName name={companyName} backgroundColor={colors.green} />
+    <div className={classes.main}>
+      <PhoneNumber>{phoneNumber}</PhoneNumber>
+      {/*<CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock()}
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
       <Video data={video} />

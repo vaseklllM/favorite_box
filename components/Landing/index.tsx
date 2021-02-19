@@ -10,7 +10,7 @@ import CompanyName from "./CompanyName"
 import ProductImageBlock from "./ProductImageBlock"
 import BackTimerFirstSection from "./BackTimerFirstSection"
 import PhoneNumber from "./PhoneNumber"
-// import SectionBuy from "./SectionBuy"
+import SectionBuy from "./SectionBuy"
 import classes from "./style.module.scss"
 import data from "./data"
 // import data from './eye'
@@ -87,10 +87,10 @@ export default function Landing() {
         starsColor={colors.starsColor}
       />
       <Order data={order} bacColor={colors.grey} />
-      {/*<CompanyName name={companyName} backgroundColor={colors.green} />
+      <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock(1)}
       <SectionBuy colors={colors} price={price} />
-      <PhoneNumber>{phoneNumber}</PhoneNumber>  */}
+      <PhoneNumber>{phoneNumber}</PhoneNumber>
     </div>
   )
 }

@@ -3,8 +3,8 @@
 import Video from "./Video"
 import Description from "./Description"
 import Comparison from "./Comparison"
-// import Instruction from "./Instruction"
-// import ProductReviews from "./ProductReviews"
+import Instruction from "./Instruction"
+import ProductReviews from "./ProductReviews"
 // import Order from "./Order"
 import CompanyName from "./CompanyName"
 import ProductImageBlock from "./ProductImageBlock"
@@ -80,13 +80,13 @@ export default function Landing() {
       <Video data={video} />
       <Description data={descriptionContainer} />
       <Comparison data={comparison} bacColor={colors.grey} buttonColor={colors.orange} />
-       {/*<Instruction data={instruction} />
+      <Instruction data={instruction} />
       <ProductReviews
         data={feedbacks}
         green={colors.green}
         starsColor={colors.starsColor}
       />
-      <Order data={order} bacColor={colors.grey} />
+      {/* <Order data={order} bacColor={colors.grey} />
       <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock(1)}
       <SectionBuy colors={colors} price={price} />

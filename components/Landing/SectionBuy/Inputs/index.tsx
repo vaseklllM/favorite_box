@@ -1,6 +1,6 @@
 import InputMask from "react-input-mask"
 import classes from "./style.module.scss"
-import { FormEvent, useState } from "react"
+import { useState, useEffect } from "react"
 import { UserIcon, PhoneIcon } from "./icons"
 import { txt } from "../../../../utils"
 import { useForm, Controller } from "react-hook-form"
@@ -16,6 +16,22 @@ type Inputs = {
 export default function Inputs(props: IInputsProps) {
   const { register, handleSubmit, control, watch } = useForm<Inputs>()
   const [errors, setErrors] = useState({ name: undefined, phoneNumber: undefined })
+
+  const name = watch("name")
+  const phoneNumber = watch("phoneNumber")
+
+  useEffect(() => {
+    if (typeof errors.name === "string" && name.length >= 2) {
+      setErrors((v) => ({ ...v, name: undefined }))
+    }
+
+    if (
+      typeof errors.phoneNumber === "string" &&
+      phoneNumber.replace(/\D+/g, "").length === 12
+    ) {
+      setErrors((v) => ({ ...v, phoneNumber: undefined }))
+    }
+  }, [name, phoneNumber])
 
   function sendDataToTelegram(data: Inputs) {
     const { name, phoneNumber } = data
@@ -35,13 +51,19 @@ export default function Inputs(props: IInputsProps) {
     /** валидация */
     if (isErrName || isErrPhone) {
       if (isErrName) {
-        setErrors((v) => ({ ...v, name: "Неправильное название" }))
+        if (name === "") {
+          setErrors((v) => ({ ...v, name: "Введите имя" }))
+        } else setErrors((v) => ({ ...v, name: "Несуществующие имя" }))
       } else {
         setErrors((v) => ({ ...v, name: undefined }))
       }
 
       if (isErrPhone) {
-        setErrors((v) => ({ ...v, phoneNumber: "Неправильный пароль" }))
+        if (phoneNumber === "") {
+          setErrors((v) => ({ ...v, phoneNumber: "Введите номер телефона" }))
+        } else {
+          setErrors((v) => ({ ...v, phoneNumber: "Неправильный номер" }))
+        }
       } else {
         setErrors((v) => ({ ...v, phoneNumber: undefined }))
       }
@@ -56,17 +78,24 @@ export default function Inputs(props: IInputsProps) {
 
   return (
     <form onSubmit={handleSubmit(buy)} className={classes.form}>
-      <div className={txt.join([classes.input_wrapper])}>
+      <div
+        className={txt.join([classes.input_wrapper, errors.name && classes.input_err])}
+      >
         <UserIcon className={classes.input_icon} />
         <input
           className={classes.input}
           name='name'
-          placeholder='Введите ваше Ф.И.О.'
+          placeholder='Введите ваше имя'
           ref={register}
         />
         {errors.name && <Span12 className={classes.err_text}>{errors.name}</Span12>}
       </div>
-      <div className={txt.join([classes.input_wrapper])}>
+      <div
+        className={txt.join([
+          classes.input_wrapper,
+          errors.phoneNumber && classes.input_err,
+        ])}
+      >
         <PhoneIcon className={txt.join([classes.input_icon, classes.phone_icon])} />
         <Controller
           as={InputMask}
@@ -85,26 +114,3 @@ export default function Inputs(props: IInputsProps) {
     </form>
   )
 }
-
-//  <div className={txt.join([classes.input, classes.name])}>
-//   <UserIcon className={classes.input_icon} />
-//   <input
-//     type='text'
-//     value={name}
-//     onChange={changeName}
-//     placeholder='Введите ваше Ф.И.О.'
-//   />
-// </div>
-// <div className={classes.input}>
-//   <PhoneIcon className={txt.join([classes.input_icon, classes.phone_icon])} />
-//   <InputMask
-//     mask='+38 (999)-999-99-99'
-//     type='tel'
-//     placeholder='Введите ваш телефон'
-//     value={phone}
-//     onChange={changePhone}
-//   />
-// </div>
-// <button onClick={buy} className={classes.btn}>
-//   Купить сейчас
-// </button>

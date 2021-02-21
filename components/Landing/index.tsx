@@ -30,8 +30,11 @@ export interface IColors {
   starsColor: string
 }
 
+
+export const titleColor: string = '#EF7385'
+
 const colors: IColors = {
-  green: "#EF7385",
+  green: titleColor,
   grey: "#2f3339",
   grey1: "#f7f8f9",
   timerGray: "#EFF2F5",

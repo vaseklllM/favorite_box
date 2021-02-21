@@ -5,6 +5,7 @@ import { UserIcon, PhoneIcon } from "./icons"
 import { txt } from "../../../../utils"
 import { useForm, Controller } from "react-hook-form"
 import { Span12 } from "../../../Text"
+import telegramApi from "../../../../api/telegram"
 
 export interface IInputsProps {
   setLoader: (value: boolean) => void
@@ -24,6 +25,8 @@ export default function Inputs(props: IInputsProps) {
   const phoneNumber = watch("phoneNumber")
 
   useEffect(() => {
+    // sendMessage()
+
     if (typeof errors.name === "string" && name.length >= 2) {
       setErrors((v) => ({ ...v, name: undefined }))
     }
@@ -39,12 +42,15 @@ export default function Inputs(props: IInputsProps) {
   async function sendDataToTelegram(data: Inputs) {
     const { name, phoneNumber } = data
 
-    setLoader(true)
-    setTimeout(() => {
-      setLoader(false)
-    }, 1000)
+    const ok = await telegramApi.sendARequest({ name, phoneNumber })
 
-    console.log("заказ отправлен")
+    console.log(ok)
+    // setLoader(true)
+    // setTimeout(() => {
+    //   setLoader(false)
+    // }, 1000)
+
+    // console.log("заказ отправлен")
 
     // console.log(name, phoneNumber)
   }

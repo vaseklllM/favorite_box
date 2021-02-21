@@ -23,7 +23,7 @@ export default function thanks(props) {
         Ваш номер телефона: <strong>+38 (044) 987-98-46</strong>
       </H4>
       <Span14 className={classes.wrong_number}>
-        Если номер неверный,
+        Если номер неверный,&nbsp;
         <Link href='/'>
           <a>отправьте заявку повторно</a>
         </Link>

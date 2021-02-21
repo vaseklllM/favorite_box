@@ -1,5 +1,3 @@
-// import { ILandingProps } from ".."
-// import classes from "./style.module.scss"
 import Video from "./Video"
 import Description from "./Description"
 import Comparison from "./Comparison"
@@ -9,13 +7,10 @@ import Order from "./Order"
 import CompanyName from "./CompanyName"
 import ProductImageBlock from "./ProductImageBlock"
 import BackTimerFirstSection from "./BackTimerFirstSection"
-import PhoneNumber from "./PhoneNumber"
+// import PhoneNumber from "./PhoneNumber"
 import SectionBuy from "./SectionBuy"
 import classes from "./style.module.scss"
 import data from "./data"
-// import data from './eye'
-
-// import { IPageData } from "../../interfaces/ISite"
 
 export interface IColors {
   green: string
@@ -30,8 +25,7 @@ export interface IColors {
   starsColor: string
 }
 
-
-export const titleColor: string = '#EF7385'
+export const titleColor: string = "#EF7385"
 
 const colors: IColors = {
   green: titleColor,

@@ -25,10 +25,6 @@ class MyDocument extends Document {
             type='text/css'
             href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
           />
-          <meta
-            name='viewport'
-            content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi'
-          />
         </Head>
         <body>
           <Main />
@@ -37,6 +33,13 @@ class MyDocument extends Document {
       </Html>
     )
   }
+}
+
+{
+  /* <meta
+            name='viewport'
+            content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi'
+          /> */
 }
 
 export default MyDocument

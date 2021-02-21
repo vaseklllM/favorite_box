@@ -10,8 +10,9 @@ import BackTimerFirstSection from "./BackTimerFirstSection"
 // import PhoneNumber from "./PhoneNumber"
 import SectionBuy from "./SectionBuy"
 import classes from "./style.module.scss"
-import data from "./data"
-
+import IStore from "../../store/interface/IStore"
+import { connect } from "react-redux"
+import { IPageData } from "../../interfaces/ISite"
 export interface IColors {
   green: string
   grey: string
@@ -40,7 +41,13 @@ const colors: IColors = {
   blue: "#36D0F8",
 }
 
-export default function Landing() {
+interface Props {
+  landingData: IPageData
+}
+
+function Landing(props: Props) {
+  const { landingData } = props
+
   const {
     phoneNumber,
     companyName,
@@ -54,7 +61,7 @@ export default function Landing() {
     instruction,
     feedbacks,
     order,
-  } = data
+  } = landingData
 
   function productImageBlock(nameId?: number, imgId?: number) {
     if (Array.isArray(mainImages) && Array.isArray(names)) {
@@ -92,9 +99,6 @@ export default function Landing() {
   )
 }
 
-const last = <T,>(arr: T[]) => {
-  return arr[arr.length - 1]
-}
+const mapState = ({ landingData }: IStore) => ({ landingData: landingData.data })
 
-const l = last(["a", "b", "c"])
-const l2 = last([1, "2", 3])
+export default connect(mapState)(Landing)

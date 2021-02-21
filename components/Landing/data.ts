@@ -136,27 +136,27 @@ const sushi: IPageData = {
         type: "request",
         title: "Заявка",
         description: "Оставляете заявку на нашем сайте.",
-        img: require("./assets/order/deliv1.png"),
+        img: require("./assets/order/pink/deliv1.png"),
       },
       {
         type: "call",
         title: "Звонок",
         description:
           "Ожидаете звонка нашего менеджера для уточнения адреса доставки и сопутствующих нюансов..",
-        img: require("./assets/order/deliv2.png"),
+        img: require("./assets/order/pink/deliv2.png"),
       },
       {
         type: "send",
         title: "Отправка",
         description: "В тот же день отправляем ваш заказ в любой город Украины.",
-        img: require("./assets/order/deliv3.png"),
+        img: require("./assets/order/pink/deliv3.png"),
       },
       {
         type: "receiving",
         title: "Получение",
         description:
           "Через 1-3 дня забираете товар на указанном вами отделении почты и там же производите его оплату.",
-        img: require("./assets/order/deliv4.png"),
+        img: require("./assets/order/pink/deliv4.png"),
       },
     ],
   },

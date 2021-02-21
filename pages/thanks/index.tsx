@@ -5,8 +5,25 @@ import CompanyName from "../../components/Landing/CompanyName"
 import { H1, H4, Span14, Span16 } from "../../components/Text"
 import classes from "./style.module.scss"
 import Image from "next/image"
+import IStore from "../../store/interface/IStore"
+import { connect } from "react-redux"
+import { useRouter } from "next/router"
 
-export default function thanks(props) {
+interface Props {
+  phoneNumber: string
+}
+
+function thanks(props: Props) {
+  const { phoneNumber } = props
+
+  const router = useRouter()
+
+  if (typeof phoneNumber !== "string") {
+    router.push("/")
+  }
+
+  console.log(phoneNumber)
+
   return (
     <div className={classes.body}>
       <CompanyName name={"text"} backgroundColor={titleColor} />
@@ -39,3 +56,9 @@ export default function thanks(props) {
     </div>
   )
 }
+
+const mapState = ({ thank }: IStore) => ({
+  phoneNumber: thank.phoneNumber,
+})
+
+export default connect(mapState)(thanks)

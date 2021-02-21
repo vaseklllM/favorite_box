@@ -6,6 +6,8 @@ import venzel from "../assets/venzel.png"
 import { IPrice } from "../../../interfaces/ISite"
 import Inputs from "./Inputs"
 import RemainingForThePromotionRow from "../RemainingForThePromotionRow"
+import { useState } from "react"
+import Spiner from "../../Spiners/Spiner"
 
 interface ISectionBuyProps {
   colors: IColors
@@ -14,6 +16,9 @@ interface ISectionBuyProps {
 
 export default function SectionBuy(props: ISectionBuyProps) {
   const { colors, price } = props
+
+  const [loader, setLoader] = useState(true)
+
   return (
     <section id='buy' className={classes.SectionBuy}>
       <Span24>
@@ -29,15 +34,9 @@ export default function SectionBuy(props: ISectionBuyProps) {
         <div className={classes.hr} style={{ backgroundColor: colors.hr }} />
         <Price price={price} colors={colors} />
       </div>
-      <Inputs />
+      {loader && <Spiner className={classes.spiner} color={colors.green} />}
+      <Inputs setLoader={setLoader} />
       <RemainingForThePromotionRow colors={colors} />
-      {/* <style global jsx>
-        {`
-          html {
-            scroll-behavior: smooth;
-          }
-        `}
-      </style> */}
     </section>
   )
 }

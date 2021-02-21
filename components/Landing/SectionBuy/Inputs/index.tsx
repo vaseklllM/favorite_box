@@ -6,7 +6,9 @@ import { txt } from "../../../../utils"
 import { useForm, Controller } from "react-hook-form"
 import { Span12 } from "../../../Text"
 
-export interface IInputsProps {}
+export interface IInputsProps {
+  setLoader: (value: boolean) => void
+}
 
 type Inputs = {
   name: string
@@ -14,6 +16,7 @@ type Inputs = {
 }
 
 export default function Inputs(props: IInputsProps) {
+  const { setLoader } = props
   const { register, handleSubmit, control, watch } = useForm<Inputs>()
   const [errors, setErrors] = useState({ name: undefined, phoneNumber: undefined })
 
@@ -33,9 +36,14 @@ export default function Inputs(props: IInputsProps) {
     }
   }, [name, phoneNumber])
 
-  function sendDataToTelegram(data: Inputs) {
+  async function sendDataToTelegram(data: Inputs) {
     const { name, phoneNumber } = data
 
+    setLoader(true)
+    setTimeout(() => {
+      setLoader(false)
+    }, 1000)
+// 
     console.log("заказ отправлен")
 
     // console.log(name, phoneNumber)

@@ -17,7 +17,7 @@ interface ISectionBuyProps {
 export default function SectionBuy(props: ISectionBuyProps) {
   const { colors, price } = props
 
-  const [loader, setLoader] = useState(true)
+  const [loader, setLoader] = useState(false)
 
   return (
     <section id='buy' className={classes.SectionBuy}>

@@ -43,7 +43,7 @@ export default function Inputs(props: IInputsProps) {
     setTimeout(() => {
       setLoader(false)
     }, 1000)
-// 
+
     console.log("заказ отправлен")
 
     // console.log(name, phoneNumber)

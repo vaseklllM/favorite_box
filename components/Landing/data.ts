@@ -24,9 +24,9 @@ const sushi: IPageData = {
     "Экономия сил и времени",
   ],
   price: {
-    active: 200,
-    prev: 600,
-    procent: -50,
+    active: 499,
+    prev: 700,
+    procent: -40,
     valute: "грн.",
   },
   video: {

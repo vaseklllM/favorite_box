@@ -31,7 +31,7 @@ export interface IColors {
 }
 
 const colors: IColors = {
-  green: "#58b958",
+  green: "#E0A2AD",
   grey: "#2f3339",
   grey1: "#f7f8f9",
   timerGray: "#EFF2F5",

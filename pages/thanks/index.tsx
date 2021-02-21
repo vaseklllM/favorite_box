@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React from "react"
+import React, { useEffect } from "react"
 import { titleColor } from "../../components/Landing"
 import CompanyName from "../../components/Landing/CompanyName"
 import { H1, H4, Span14, Span16 } from "../../components/Text"
@@ -14,14 +14,15 @@ interface Props {
   companyName: string
 }
 
-function thanks(props: Props) {
+function Thanks(props: Props) {
   const { phoneNumber, companyName } = props
-
   const router = useRouter()
 
-  if (typeof phoneNumber !== "string") {
-    router.push("/")
-  }
+  useEffect(() => {
+    if (typeof phoneNumber !== "string") {
+      router.push("/")
+    }
+  }, [])
 
   return (
     <div className={classes.body}>
@@ -61,4 +62,4 @@ const mapState = ({ thank, landingData }: IStore) => ({
   companyName: landingData.data.companyName,
 })
 
-export default connect(mapState)(thanks)
+export default connect(mapState)(Thanks)

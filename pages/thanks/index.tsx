@@ -11,10 +11,11 @@ import { useRouter } from "next/router"
 
 interface Props {
   phoneNumber: string
+  companyName: string
 }
 
 function thanks(props: Props) {
-  const { phoneNumber } = props
+  const { phoneNumber, companyName } = props
 
   const router = useRouter()
 
@@ -22,11 +23,9 @@ function thanks(props: Props) {
     router.push("/")
   }
 
-  console.log(phoneNumber)
-
   return (
     <div className={classes.body}>
-      <CompanyName name={"text"} backgroundColor={titleColor} />
+      <CompanyName name={companyName} backgroundColor={titleColor} />
       <H1 className={classes.title}>Ваш заказ оформлен!</H1>
       <Span16 className={classes.subtitle}>
         Для уточнения указанных данных и подтверждения заказа с вами в ближайшее рабочее
@@ -34,10 +33,10 @@ function thanks(props: Props) {
       </Span16>
       <Span16 className={classes.subtitle2}>(с 8:00 до 22:00)</Span16>
       <H4 className={classes.my_phone}>
-        Мы позвоним с <strong>(044)</strong> 333-90-<strong>48</strong>
+        Мы позвоним с <strong>(066)</strong> 764-79-<strong>24</strong>
       </H4>
       <H4 className={classes.you_phone}>
-        Ваш номер телефона: <strong>+38 (044) 987-98-46</strong>
+        Ваш номер телефона: <strong>{phoneNumber}</strong>
       </H4>
       <Span14 className={classes.wrong_number}>
         Если номер неверный,&nbsp;
@@ -57,8 +56,9 @@ function thanks(props: Props) {
   )
 }
 
-const mapState = ({ thank }: IStore) => ({
+const mapState = ({ thank, landingData }: IStore) => ({
   phoneNumber: thank.phoneNumber,
+  companyName: landingData.data.companyName,
 })
 
 export default connect(mapState)(thanks)

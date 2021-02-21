@@ -7,9 +7,13 @@ import { useForm, Controller } from "react-hook-form"
 import { Span12 } from "../../../Text"
 import telegramApi from "../../../../api/telegram"
 import { useRouter } from "next/router"
+import thankActions from "../../../../store/thank/actions"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
 
-export interface IInputsProps {
+interface IInputsProps {
   setLoader: (value: boolean) => void
+  changePhoneNumber: (v: string) => void
 }
 
 type Inputs = {
@@ -17,8 +21,8 @@ type Inputs = {
   phoneNumber: string
 }
 
-export default function Inputs(props: IInputsProps) {
-  const { setLoader } = props
+function Inputs(props: IInputsProps) {
+  const { setLoader, changePhoneNumber } = props
   const { register, handleSubmit, control, watch } = useForm<Inputs>()
   const [errors, setErrors] = useState({ name: undefined, phoneNumber: undefined })
 
@@ -40,7 +44,7 @@ export default function Inputs(props: IInputsProps) {
     }
   }, [name, phoneNumber])
 
-  async function sendDataToTelegram(data: Inputs) {
+  async function sendDataToTelegram(data: Inputs, defPhoneNum) {
     const { name, phoneNumber } = data
 
     setLoader(true)
@@ -48,6 +52,7 @@ export default function Inputs(props: IInputsProps) {
 
     if (ok) {
       setLoader(false)
+      changePhoneNumber(defPhoneNum)
       router.push("/thanks")
     }
   }
@@ -84,7 +89,7 @@ export default function Inputs(props: IInputsProps) {
 
     setErrors((v) => ({ ...v, name: undefined, phoneNumber: undefined }))
 
-    sendDataToTelegram({ phoneNumber, name })
+    sendDataToTelegram({ phoneNumber, name }, data.phoneNumber)
   }
 
   return (
@@ -125,3 +130,10 @@ export default function Inputs(props: IInputsProps) {
     </form>
   )
 }
+
+const mapDispatch = (d) => {
+  const { changePhoneNumber } = thankActions
+  return bindActionCreators({ changePhoneNumber }, d)
+}
+
+export default connect(null, mapDispatch)(Inputs)

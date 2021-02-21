@@ -73,7 +73,7 @@ export default function Landing() {
 
   return (
     <div className={classes.main}>
-      <PhoneNumber>{phoneNumber}</PhoneNumber>
+      {/* <PhoneNumber>{phoneNumber}</PhoneNumber> */}
       <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock()}
       <BackTimerFirstSection colors={colors} price={price} advantages={advantages} />
@@ -90,7 +90,7 @@ export default function Landing() {
       <CompanyName name={companyName} backgroundColor={colors.green} />
       {productImageBlock(1)}
       <SectionBuy colors={colors} price={price} />
-      <PhoneNumber>{phoneNumber}</PhoneNumber>
+      {/* <PhoneNumber>{phoneNumber}</PhoneNumber> */}
     </div>
   )
 }

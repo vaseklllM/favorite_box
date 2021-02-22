@@ -27,7 +27,7 @@ export interface IPageData {
     text: string // описание
   }
   // инструкция использования
-  instruction: {
+  instruction?: {
     title: string // описание блока инструкции
     steps: IInstructionStep[]
   }

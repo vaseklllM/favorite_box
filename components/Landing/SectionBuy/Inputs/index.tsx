@@ -10,6 +10,7 @@ import { useRouter } from "next/router"
 import thankActions from "../../../../store/thank/actions"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
+import * as fbq from '../../../../lib/fpixel'
 
 interface IInputsProps {
   setLoader: (value: boolean) => void
@@ -53,6 +54,7 @@ function Inputs(props: IInputsProps) {
     if (ok) {
       setLoader(false)
       changePhoneNumber(defPhoneNum)
+      fbq.event('Purchase', { currency: 'UAH', value: 499 })
       router.push("/thanks")
     }
   }

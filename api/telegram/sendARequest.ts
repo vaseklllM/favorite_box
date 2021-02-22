@@ -16,7 +16,5 @@ export default async function sendARequest(params: ISendMessageParams): Promise<
 
   const data = await res.json()
 
-  console.log(data)
-
   return data.ok
 }

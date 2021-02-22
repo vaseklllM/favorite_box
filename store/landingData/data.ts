@@ -1,9 +1,9 @@
 import { IPageData } from "../../interfaces/ISite"
 
 const sushi: IPageData = {
-  companyName: "HAPPY BIRTHDAY",
+  companyName: "FAVORITE BOX",
   names: [
-    "Подарок девушке, подруге, коллеге".toUpperCase(),
+    "лучший Подарок девушке, подруге, коллеге".toUpperCase(),
     "НАСЛАЖДАЙТЕСЬ ВКУСНЕЙШИМИ ДОМАШНИМИ РОЛЛАМИ",
   ],
   phoneNumber: "+38 (044) 333-90-48",
@@ -19,9 +19,9 @@ const sushi: IPageData = {
     "С сушимейкером HappySmile вы гарантированно избавитесь от этих проблем и буквально за 2-3 минуты приготовите красивые и вкусные суши и роллы с идеальным количеством риса и начинки.",
   ],
   advantages: [
-    "100% идеальный результат",
-    "Безупречный вкус и гарантированное качество",
-    "Экономия сил и времени",
+    "Мы отвечаем за качество",
+    "Есть наложный платеж",
+    "Доставка Новой Поштой",
   ],
   price: {
     active: 499,
@@ -29,10 +29,10 @@ const sushi: IPageData = {
     procent: -40,
     valute: "грн.",
   },
-  video: {
-    img: "https://happysmile.ua/data/uploads/diozator_dlya_sushi_video.jpg",
-    url: "https://www.youtube.com/embed/TFKa4liHkaE",
-  },
+  // video: {
+  //   img: "https://happysmile.ua/data/uploads/diozator_dlya_sushi_video.jpg",
+  //   url: "https://www.youtube.com/embed/TFKa4liHkaE",
+  // },
   descriptionContainer: {
     title: "О наборе",
     img: "/assets/images/main2.jpg",
@@ -42,41 +42,37 @@ const sushi: IPageData = {
     //   "1. Шоколадку Ritter Sport.\n2. Конфетки Raffaello (4 шт. в уп.).\n3. Вкусный зелёный чай.\n4. Сироп со вкусом розы (100 мл).\n5. Упаковку воздушных маршмеллоу.\n6. Две баночки мини-джемов.\n7. Открытку «С Днем Рождения», в конверте.\n8. Подарочную коробку с декором.",
   },
   comparison: {
-    title:
-      "Становитесь виртуозом в приготовлении суши и роллов с сушимейкером HappySmile!",
+    title: "Почему именно мы?",
     comparisons: [
       {
         bad: {
-          img: "https://picsum.photos/id/50/480/400",
-          description: "Внешний вид роллов оставляет желать лучшего",
+          img: "/comparison/c1.jpg",
+          description: "Favorite Box - лучший подарок на восьмое марта",
         },
         nice: {
-          img: "https://picsum.photos/id/49/480/400",
-          description:
-            "Безупречный и аппетитный внешний вид с идеальным количеством риса и начинки",
+          img: "/comparison/с2.jpg",
+          description: "Отправим ваш заказ в течении 12 часов",
         },
       },
       {
         bad: {
-          img: "https://picsum.photos/id/51/480/400",
-          description: "Обычные самодельные роллы рассыпаются и разваливаются на ходу",
+          img: "/comparison/с3.jpg",
+          description:
+            "Мы вам гарантируем лучшие впечетления и отличное настроение",
         },
         nice: {
-          img: "https://picsum.photos/id/52/480/400",
-          description:
-            "С помощью аппарата HappySmile получаются плотные и аккуратные рулетики",
+          img: "/comparison/с4.jpg",
+          description: "Мы очень рады делать ваши праздники более красочным",
         },
       },
       {
         bad: {
-          img: "https://picsum.photos/id/53/480/400",
-          description:
-            "Магазинные роллы содержат мало начинки и нет гарантии, что для их приготовления использовались свежие и качественные продукты",
+          img: "/comparison/с5.jpg",
+          description: "Лучшая цена среди конкурентов",
         },
         nice: {
-          img: "https://picsum.photos/id/54/480/400",
-          description:
-            "Домашние роллы, приготовленные из строго отобранных качественных продуктов с помощью девайса HappySmile, безупречны по вкусу",
+          img: "/comparison/с6.jpg",
+          description: "Скидка при заказе больше 2-х боксов",
         },
       },
     ],

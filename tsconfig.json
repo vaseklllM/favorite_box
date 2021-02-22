@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js"
-  ],
+, "lib/fpixel.js"  ],
   "exclude": [
     "node_modules"
   ]

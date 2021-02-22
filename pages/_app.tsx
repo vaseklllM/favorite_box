@@ -2,14 +2,17 @@ import "../styles/globals.css"
 import rootReducer from "../store/reducers"
 import { createStore } from "redux"
 import { Provider } from "react-redux"
+import FacebookPixel from "../components/FacebookPixel"
 
 const store = createStore(rootReducer)
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <FacebookPixel>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </FacebookPixel>
   )
 }
 

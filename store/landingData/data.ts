@@ -7,7 +7,7 @@ const data: IPageData = {
     "НАСЛАЖДАЙТЕСЬ ВКУСНЕЙШИМИ ДОМАШНИМИ РОЛЛАМИ",
   ],
   phoneNumber: "+38 (044) 333-90-48",
-  mainImages: ["/assets/images/main.jpg"],
+  mainImages: ["/assets/images/main.jpg", "/assets/images/PhotoBox1.jpg"],
   goodsLeft: "Немного",
   slang: "Приготовить роллы за 3 минуты? Это реально!",
   descriptions: [

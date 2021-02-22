@@ -92,7 +92,7 @@ function Landing(props: Props) {
       />
       <Order data={order} bacColor={colors.grey} />
       <CompanyName name={companyName} backgroundColor={colors.green} />
-      {productImageBlock(1)}
+      {productImageBlock(1, 1)}
       <SectionBuy colors={colors} price={price} />
       {/* <PhoneNumber>{phoneNumber}</PhoneNumber> */}
     </div>

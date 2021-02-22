@@ -3,8 +3,8 @@ import { IPageData } from "../../interfaces/ISite"
 const data: IPageData = {
   companyName: "FAVORITE BOX",
   names: [
-    "лучший Подарок девушке, подруге, коллеге".toUpperCase(),
-    "НАСЛАЖДАЙТЕСЬ ВКУСНЕЙШИМИ ДОМАШНИМИ РОЛЛАМИ",
+    "лучший подарок девушке, подруге, коллеге".toUpperCase(),
+    "ЛУЧШИЕ ТОВАРЫ ОТ ЛУЧШИХ ПРОИЗВОДИТЕЛЕЙ",
   ],
   phoneNumber: "+38 (044) 333-90-48",
   mainImages: ["/assets/images/main.jpg", "/assets/images/PhotoBox1.jpg"],
@@ -21,7 +21,7 @@ const data: IPageData = {
   advantages: [
     "Мы отвечаем за качество",
     "Есть наложный платеж",
-    "Доставка Новой Поштой",
+    "Доставка Новой Почтой",
   ],
   price: {
     active: 499,
@@ -153,7 +153,7 @@ const data: IPageData = {
   },
   order: {
     title:
-      "Заказать устройство для приготовления домашних суши и роллов HappySmile легко!",
+      "Заказать подарочный набор Favorite Box очень просто!",
     steps: [
       {
         type: "request",

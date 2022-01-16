@@ -26,6 +26,7 @@ class MyDocument extends Document {
             type='text/css'
             href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
           />
+          <meta name="facebook-domain-verification" content="vatfffno8yax7qqb5h0ip7z8b6hupq" />
           <script
             dangerouslySetInnerHTML={{
               __html: `
